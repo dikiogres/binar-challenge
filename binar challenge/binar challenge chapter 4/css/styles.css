@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Poppins:400,500,700,800");
+
+html,
+body{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+body{
+    background-color:#9C835F;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    font-weight: 700;
+    width: 100%;
+}
+header{
+    display: flex;
+    margin: 30px 0 0 30px;
+}
+a{
+    color: #724C21;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 98px;
+    text-decoration: none;
+}
+a:hover{
+    background-color: orange;
+    border-radius: 150px;
+}
+button {
+    background-color: Transparent;
+    border-color: transparent;
+    width: 30%;
+    height: 120px;
+}
+section{
+    margin: 5px auto;
+}
+
+.back{
+    display: grid;
+    place-items: center;
+}
+.back:hover{
+    transform: scale(1.5);
+}
+.RPS{
+    align-items: center;
+    display: flex;
+    margin-left: 27px;
+}
+.RPS h1{
+    color: #F9B23D;
+    font-size:36px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 49px;
+    margin-left: 27px;
+    text-align: center;   
+}
+.logo{
+    width: 72px;
+    height: 72px;
+}
+.main-area{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    text-align: center;
+}
+.choosen{
+    display: flex;
+    flex-direction: column;
+}
+.player-name{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 49px;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+.rps-button{
+    background-color: Transparent;
+    border-color: transparent;
+    width: 30%;
+    height: 120px;
+}
+.player-tool{
+    align-self: center;
+    width: 223px;
+    height: 204px;
+}
+.player-tool img{
+    width: 50%;
+}
+.chosen{
+    margin: 20px 10px;
+    width: 300px;
+}
+.versus-refresh {
+    margin: 20px 10px;
+}
+
+.versus-refresh h1 {
+    color: #BD0000;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.versus-refresh img {
+   width: 50%;
+}
+.player-rps{
+    margin: auto 5% 0 0;
+}
+.computer-rps{
+    margin: auto 0 0 5%;
+}
+.your-tool{
+    cursor: pointer;
+}
+.your-tool:hover {
+    transform: rotate(20deg);
+    animation-name: buttonAnimate;
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+@keyframes buttonAnimate {
+    0% {transform: rotate(20deg);
+    }
+    25% {transform: rotate(10deg);
+    }
+    50% {transform: rotate(0deg);
+    }
+    65% {transform: rotate(-10deg);
+    }
+    85% {transform: rotate(-20deg);
+    }
+    100% {transform: rotate(10deg);
+    }
+}
+.chosen {
+    background-color: #C4C4C4;
+    border-radius: 30px;
+}
+.winBox {
+    height: 166.93px;;
+    display: grid;
+    place-items: center;
+    background: #4C9654;
+    border-radius: 10px;
+    margin:  15px auto;
+    padding: 15px;
+    transform: rotate(-28.87deg);
+}
+
+.drawBox {
+    height: 166.93px;;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    margin:  15px auto;
+    padding: 15px;
+    background: #035B0C;
+    border-radius: 10px;
+    transform: rotate(-28.87deg);
+}
+@media(min-width:750px){
+    .main-area{
+    flex-direction: row;
+     transform: translateX(15%);
+    }
+    .choosen{
+        display: flex;
+        flex-direction: column;
+    }
+    .player-tool{
+        align-self: center;
+        width: 223px;
+        height: 204px;
+    }
+    .versus-refresh img {
+        width: 50px;
+        transform: translateY(350%)
+    }
+    .versus-refresh {
+        margin: auto 50px;
+        width: 300px
+
+    }
+    .versus-refresh h1{
+        font-size: 144px;
+    }
+}
