@@ -1,5 +1,4 @@
-Ini merupakan sebuah web statis sebagai bentuk frontend dari aplikasi game sederhana. Web ini dibuat menggunakan:
+Binar Academy Challenge github repository
 - HTML
 - CSS
-- Bootstrap 5
-- JavaScript
+- Js
