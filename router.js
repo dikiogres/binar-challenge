@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const user = require('./posts.json')
+const user = require('./db/posts.json')
 
-let posts = require('./posts.json');
+//let posts = require('./posts.json');
 
 router.use((req, res, next) => {
     console.log('Time: ', new Date(Date.now()));
@@ -25,16 +25,17 @@ router.get('/login', (req, res) => {
 
 router.post('/login', (req, res) => {
     const {email, password} = req.body;
-    let userEmail = user.find(x => x.email === email);
-    let userPassword = user.find(x => x.password === password);
-    if(!userEmail){
+    const getEmail = user.find(x => x.email === email);
+    const getPassword = user.find(x => x.password === password);
+    //let getUsername = user.find(x => x.username === username);
+    if(!getEmail){
         res.json("Email not found!");
     }
-    else if(userEmail && !userPassword){
+    else if(getEmail && !getPassword){
         res.json("Wrong Password!");
     }
     else{
-        res.json(userEmail);
+        res.json(getEmail);
     }
 
 })
