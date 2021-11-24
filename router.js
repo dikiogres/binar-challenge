@@ -39,6 +39,74 @@ router.post('/login', (req, res) => {
     }
 
 })
+//create
+router.get('/create', async(req,res) => {
+    await res.render('create')
+})
+
+router.post('/create', async(req,res) =>{
+    const {username,password} = req.body
+    try{
+        const user = await User.create({username,password})
+        return res.redirect('/admin')
+    }
+    catch(err){
+    console.log(err)
+        return res.status(500).json(err)
+    }
+})
+
+//read
+router.get('/admin', (req,res) => {
+    User.findAll()
+     .then(articles => {
+         res.render('articles/main', {
+             articles
+         })
+     })
+ })
+
+//update
+router.get('/edit/:id', async(req,res) => {
+   const {id} = await req.params;
+   const user = await User.findOne({
+       where:{
+           id:id
+       },
+       
+       raw:true
+       
+   }).catch(error=> console.log(error))
+     res.render('edit',{user})
+
+})
+
+
+router.post('/update/:id', async(req,res) => {
+  const {id} = req.params;
+  const data = req.body;
+  const selector = {where: {id:id}}
+  await User.update(data,selector).catch(error=>console.log(error))
+
+     res.redirect('/admin')
+})
+
+
+//delete
+router.get('/delete/:id', async(req,res) => {
+    const {id} = await req.params;
+    const user = await User.destroy({
+        where:{
+            id:id
+        },
+        
+        raw:true
+        
+    }).catch(error=> console.log(error))
+    
+    res.redirect('/admin')
+ 
+ })
 
 router.use((req,res)=>{
     res.status(404).render('404');
