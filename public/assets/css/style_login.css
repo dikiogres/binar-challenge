@@ -1,0 +1,27 @@
+body {
+    font-family: "Inter", sans-serif !important;
+  }
+  
+  form {
+    background-color: rgb(130, 102, 68, 0.85);
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .title-page {
+    font-size: x-large;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+  
+  .form-group {
+    margin-top: 1rem;
+  }
+  
+  .btn {
+    background-color: goldenrod !important;
+    width: 12rem !important;
+    height: 3rem !important;
+    margin-top: 1.5rem;
+  }
+  

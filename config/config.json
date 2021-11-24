@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "dzikrisyairozi",
+    "password": "binar5025201201",
+    "database": "binar_development1",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "dzikrisyairozi",
+    "password": "binar5025201201",
+    "database": "binar_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "dzikrisyairozi",
+    "password": "binar5025201201",
+    "database": "binar_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

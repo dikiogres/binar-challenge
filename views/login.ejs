@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Login</title>
+    <!-- Style CSS -->
+    <link href="assets/css/style_login.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <form
+      action="/api/login"
+      method="POST"
+      class="d-flex flex-column justify-content-center align-items-center"
+    >
+      <p class="title-page">ADMIN LOGIN</p>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Username</label>
+        <input
+          name="username"
+          type="text"
+          class="form-control"
+          placeholder="Enter username"
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input
+          name="password"
+          type="password"
+          class="form-control"
+          placeholder="Enter password"
+        />
+      </div>
+      <button type="submit" class="btn">LOGIN</button>
+    </form>
+  </body>
+</html>
