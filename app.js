@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express(); 
 const morgan = require('morgan');
-const router = require('./router');
+const authRouter= require('./router/authRouter');
 const port = 3000;
 
 app.set('view engine', 'ejs');
